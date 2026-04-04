@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You Sneha❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+section { padding: 60px 20px; }
+
+h1, h2 { color: #ff2e63; }
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.btn {
+  background: #ff2e63;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.gallery img {
+  width: 45%;
+  margin: 5px;
+  border-radius: 15px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  width: 80%;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <h1>Hey sneha❤️</h1>
+  <p>I made this just to see you smile ❤️</p>
+  <button class="btn" onclick="scrollDown()">Our Story 💕</button>
+</section>
+
+<section>
+  <h2>Our Story 💕</h2>
+  <p>You are the best thing that ever happened to me.
+  Choti choti baaton pr gussa hoti ho but i love this behaviour and tumhara special quote "Jo bhi ho" is my all time favourite.
+  It still feels unreal that we met on Hinge and became this close. Even with the distance between us, you’ve become such an important part of my life. You make my days better without even trying, and I’m really grateful I found you ❤️
+</p>
+</section>
+
+<section class="gallery">
+  <h2>I am sorry for talking rudely 📸</h2>
+  <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=600" style="width:100%;border-radius:15px;">
+  <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=600" style="width:100%;border-radius:15px;">
+</section>
+
+<section>
+  <button class="btn" onclick="showPopup()">Click Me 💖</button>
+</section>
+
+<div class="popup" id="popup">
+  <h2>I love you so much sneha ❤️</h2>
+  <button class="btn" onclick="closePopup()">Close</button>
+</div>
+
+<script>
+function scrollDown(){
+  window.scrollTo({top: window.innerHeight, behavior:'smooth'});
+}
+function showPopup(){
+  document.getElementById("popup").style.display="block";
+}
+function closePopup(){
+  document.getElementById("popup").style.display="none";
+}
+</script>
+
+</body>
+</html>
