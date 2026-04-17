@@ -1,101 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You Sneha❤️</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorry My sneha ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to bottom, #ffd6e0, #fff0f5);
+      text-align: center;
+      color: #ff4d6d;
+    }
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #ffdde1, #ee9ca7);
-  text-align: center;
-  overflow-x: hidden;
-}
+    .container {
+      padding: 20px;
+    }
 
-section { padding: 60px 20px; }
+    h1 {
+      font-size: 28px;
+      margin-top: 20px;
+    }
 
-h1, h2 { color: #ff2e63; }
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-}
+    .heart {
+      font-size: 40px;
+      animation: beat 1s infinite;
+    }
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
 
-.btn {
-  background: #ff2e63;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-}
+    .teddy {
+      width: 200px;
+      margin-top: 20px;
+    }
 
-.gallery img {
-  width: 45%;
-  margin: 5px;
-  border-radius: 15px;
-}
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
 
-.popup {
-  display: none;
-  position: fixed;
-  top: 30%;
-  left: 10%;
-  width: 80%;
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-}
-</style>
+    .btn:hover {
+      background: #ff1e4d;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
+    <h1>I'm Really Sorry 🥺</h1>
+    
+    <img class="teddy" src="https://clipart-library.com/images_k/teddy-bear-transparent-background/teddy-bear-transparent-background-6.png" alt="Teddy Bear with Balloon">
 
-<section class="hero">
-  <h1>Hey sneha❤️</h1>
-  <p>I made this just to see you smile ❤️</p>
-  <button class="btn" onclick="scrollDown()">Our Story 💕</button>
-</section>
+    <p>
+      I didn’t mean to hurt you 💔<br>
+      You mean everything to me ❤️
+    </p>
 
-<section>
-  <h2>Our Story 💕</h2>
-  <p>You are the best thing that ever happened to me.
-  Choti choti baaton pr gussa hoti ho but i love this behaviour and tumhara special quote "Jo bhi ho" is my all time favourite.
-  It still feels unreal that we met on Hinge and became this close. Even with the distance between us, you’ve become such an important part of my life. You make my days better without even trying, and I’m really grateful I found you ❤️
-</p>
-</section>
+    <div class="heart">❤️</div>
 
-<section class="gallery">
-  <h2>I am sorry for talking rudely 📸</h2>
-  <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=600" style="width:100%;border-radius:15px;">
-  <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=600" style="width:100%;border-radius:15px;">
-</section>
+    <button class="btn" onclick="showLove()">Click Me 💕</button>
 
-<section>
-  <button class="btn" onclick="showPopup()">Click Me 💖</button>
-</section>
+    <div id="loveMessage" class="hidden">
+      <h1>I LOVE YOU SNEHA BABY 😘</h1>
+      <p>
+        Please forgive me 🥺<br>
+        I promise to make you smile always 💖
+      </p>
+    </div>
+  </div>
 
-<div class="popup" id="popup">
-  <h2>I love you so much sneha ❤️</h2>
-  <button class="btn" onclick="closePopup()">Close</button>
-</div>
-
-<script>
-function scrollDown(){
-  window.scrollTo({top: window.innerHeight, behavior:'smooth'});
-}
-function showPopup(){
-  document.getElementById("popup").style.display="block";
-}
-function closePopup(){
-  document.getElementById("popup").style.display="none";
-}
-</script>
-
+  <script>
+    function showLove() {
+      document.getElementById("loveMessage").classList.remove("hidden");
+    }
+  </script>
 </body>
 </html>
