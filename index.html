@@ -1,96 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sorry My sneha ❤️</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Comic Sans MS', cursive;
-      background: linear-gradient(to bottom, #ffd6e0, #fff0f5);
-      text-align: center;
-      color: #ff4d6d;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Now Streaming: Rasmalai ❤️</title>
 
-    .container {
-      padding: 20px;
-    }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-    h1 {
-      font-size: 28px;
-      margin-top: 20px;
-    }
+body{
+    background:#141414;
+    color:white;
+}
 
-    p {
-      font-size: 18px;
-      margin: 15px 0;
-    }
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(to top, #141414 5%, transparent 40%),
+    linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.2)),
+    url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1500&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+}
 
-    .heart {
-      font-size: 40px;
-      animation: beat 1s infinite;
-    }
-    @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-    }
+.nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+}
 
-    .teddy {
-      width: 200px;
-      margin-top: 20px;
-    }
+.logo{
+    color:#e50914;
+    font-size:34px;
+    font-weight:bold;
+}
 
-    .btn {
-      margin-top: 20px;
-      padding: 12px 25px;
-      font-size: 16px;
-      background: #ff4d6d;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+.hero-content{
+    margin:auto 60px;
+    max-width:650px;
+}
 
-    .btn:hover {
-      background: #ff1e4d;
-    }
+.badge{
+    color:#46d369;
+    font-weight:bold;
+    margin-bottom:15px;
+}
 
-    .hidden {
-      display: none;
-    }
-  </style>
+.title{
+    font-size:60px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-size:22px;
+    color:#ddd;
+    margin-bottom:20px;
+}
+
+.description{
+    font-size:18px;
+    line-height:1.6;
+    color:#ddd;
+}
+
+.buttons{
+    margin-top:25px;
+}
+
+.btn{
+    border:none;
+    padding:14px 30px;
+    font-size:18px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-right:10px;
+}
+
+.play{
+    background:white;
+}
+
+.info{
+    background:rgba(109,109,110,.7);
+    color:white;
+}
+
+.section{
+    padding:30px 40px;
+}
+
+.section h2{
+    margin-bottom:20px;
+}
+
+.row{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+}
+
+.card{
+    min-width:250px;
+    height:140px;
+    background:#222;
+    border-radius:8px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:scale(1.08);
+    background:#333;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.modal-content{
+    background:#181818;
+    padding:40px;
+    width:80%;
+    max-width:700px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.close{
+    float:right;
+    cursor:pointer;
+    font-size:30px;
+}
+
+.footer{
+    text-align:center;
+    padding:40px;
+    color:#888;
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>I'm Really Sorry 🥺</h1>
-    
-    <img class="teddy" src="https://clipart-library.com/images_k/teddy-bear-transparent-background/teddy-bear-transparent-background-6.png" alt="Teddy Bear with Balloon">
 
-    <p>
-      I didn’t mean to hurt you 💔<br>
-      You mean everything to me ❤️
-    </p>
+<div class="hero">
 
-    <div class="heart">❤️</div>
+<div class="nav">
+<div class="logo">OUR STORY ❤️</div>
+</div>
 
-    <button class="btn" onclick="showLove()">Click Me 💕</button>
+<div class="hero-content">
 
-    <div id="loveMessage" class="hidden">
-      <h1>I LOVE YOU SNEHA BABY 😘</h1>
-      <p>
-        Please forgive me 🥺<br>
-        I promise to make you smile :) always 💖
-      </p>
-    </div>
-  </div>
+<div class="badge">NOW STREAMING</div>
 
-  <script>
-    function showLove() {
-      document.getElementById("loveMessage").classList.remove("hidden");
+<div class="title">The Girl Called Rasmalai ❤️</div>
+
+<div class="subtitle">
+Starring: Sneha ✨
+</div>
+
+<div class="description">
+A heartwarming series about a girl who somehow manages
+to make ordinary days feel special, random conversations
+feel memorable, and one particular guy smile a lot more
+than he used to.
+</div>
+
+<div class="buttons">
+<button class="btn play" onclick="playMovie()">▶ Play</button>
+<button class="btn info" onclick="showInfo()">ℹ More Info</button>
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<h2>Continue Watching ❤️</h2>
+
+<div class="row">
+
+<div class="card"
+onclick="openModal('The Day We Met','Little did I know that one conversation would become one of my favorite memories.')">
+The Day We Met
+</div>
+
+<div class="card"
+onclick="openModal('Your Smile','One of the easiest ways to improve my day is simply seeing you smile.')">
+Your Smile
+</div>
+
+<div class="card"
+onclick="openModal('Favorite Notification','You know things are serious when seeing your message instantly improves the mood.')">
+Favorite Notification
+</div>
+
+<div class="card"
+onclick="openModal('Comfort Person','Thank you for making conversations feel easy and comfortable.')">
+Comfort Person
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<h2>Top Picks For Sneha ❤️</h2>
+
+<div class="row">
+
+<div class="card"
+onclick="openModal('Reason #1','You are kind in ways people often overlook.')">
+Reason #1
+</div>
+
+<div class="card"
+onclick="openModal('Reason #2','You make ordinary moments memorable.')">
+Reason #2
+</div>
+
+<div class="card"
+onclick="openModal('Reason #3','You are genuinely fun to talk to.')">
+Reason #3
+</div>
+
+<div class="card"
+onclick="openModal('Reason #4','Because you are you.')">
+Reason #4
+</div>
+
+</div>
+</div>
+
+<div class="section">
+<h2>Coming Soon 🎬</h2>
+
+<div class="row">
+
+<div class="card"
+onclick="openModal('Future Memory','A future memory waiting to happen.')">
+Movie Together
+</div>
+
+<div class="card"
+onclick="openModal('Adventure','Hopefully many laughs and memories ahead.')">
+Trip Together
+</div>
+
+<div class="card"
+onclick="openModal('Many More Episodes','This series is just getting started.')">
+Season 2
+</div>
+
+<div class="card"
+onclick="secretButton()">
+DO NOT CLICK 😏
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+Created for Sneha ❤️ AKA Rasmalai
+</div>
+
+<div class="modal" id="modal">
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<h1 id="modalTitle"></h1>
+<br>
+<p id="modalText"></p>
+
+</div>
+</div>
+
+<script>
+
+function openModal(title,text){
+    document.getElementById("modal").style.display="flex";
+    document.getElementById("modalTitle").innerText=title;
+    document.getElementById("modalText").innerText=text;
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
+
+function playMovie(){
+    openModal(
+        "Now Playing ❤️",
+        "Out of all the people I could have met, I am genuinely happy that I met you, Sneha. Thank you for being part of my days and for making them brighter. ❤️"
+    );
+}
+
+function showInfo(){
+    openModal(
+        "Series Information",
+        "Genre: Romance, Comedy, Comfort. Rating: 10/10. Main Character: Sneha (Rasmalai). Status: My Favorite Person."
+    );
+}
+
+function secretButton(){
+    openModal(
+        "Error 404 ❤️",
+        "Search completed. No one more special than Rasmalai was found."
+    );
+}
+
+window.onclick = function(event){
+    let modal = document.getElementById("modal");
+    if(event.target == modal){
+        modal.style.display = "none";
     }
-  </script>
+}
+</script>
+
 </body>
 </html>
