@@ -3,334 +3,276 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Now Streaming: Rasmalai ❤️</title>
+<title>For My Rasmalai ❤️</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:#141414;
+    min-height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+.container{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:25px;
+    max-width:700px;
+    width:90%;
     color:white;
+    z-index:10;
 }
 
-.hero{
-    height:100vh;
-    background:
-    linear-gradient(to top, #141414 5%, transparent 40%),
-    linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.2)),
-    url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1500&q=80');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    flex-direction:column;
-}
-
-.nav{
-    display:flex;
-    justify-content:space-between;
-    padding:20px 50px;
-}
-
-.logo{
-    color:#e50914;
-    font-size:34px;
-    font-weight:bold;
-}
-
-.hero-content{
-    margin:auto 60px;
-    max-width:650px;
-}
-
-.badge{
-    color:#46d369;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-.title{
-    font-size:60px;
-    font-weight:bold;
+h1{
+    font-size:3rem;
     margin-bottom:10px;
 }
 
-.subtitle{
-    font-size:22px;
-    color:#ddd;
-    margin-bottom:20px;
+h2{
+    margin:20px 0;
+    font-size:2rem;
 }
 
-.description{
-    font-size:18px;
-    line-height:1.6;
-    color:#ddd;
+p{
+    font-size:1.2rem;
+    line-height:1.8;
 }
 
-.buttons{
-    margin-top:25px;
+.heart{
+    font-size:80px;
+    animation:beat 1s infinite;
 }
 
-.btn{
+@keyframes beat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+}
+
+.btn-container{
+    margin-top:35px;
+    height:180px;
+    position:relative;
+}
+
+button{
     border:none;
-    padding:14px 30px;
-    font-size:18px;
-    border-radius:5px;
-    cursor:pointer;
-    margin-right:10px;
-}
-
-.play{
-    background:white;
-}
-
-.info{
-    background:rgba(109,109,110,.7);
-    color:white;
-}
-
-.section{
-    padding:30px 40px;
-}
-
-.section h2{
-    margin-bottom:20px;
-}
-
-.row{
-    display:flex;
-    gap:15px;
-    overflow-x:auto;
-}
-
-.card{
-    min-width:250px;
-    height:140px;
-    background:#222;
-    border-radius:8px;
-    padding:20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
+    border-radius:50px;
+    padding:15px 35px;
+    font-size:1.2rem;
     cursor:pointer;
     transition:.3s;
 }
 
-.card:hover{
-    transform:scale(1.08);
-    background:#333;
+#yesBtn{
+    background:#ff4f81;
+    color:white;
+    box-shadow:0 0 20px rgba(255,79,129,0.4);
 }
 
-.modal{
-    display:none;
+#yesBtn:hover{
+    transform:scale(1.1);
+}
+
+#noBtn{
+    background:white;
+    color:#ff4f81;
     position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.9);
-    justify-content:center;
-    align-items:center;
-    z-index:1000;
+    font-weight:bold;
 }
 
-.modal-content{
-    background:#181818;
-    padding:40px;
-    width:80%;
-    max-width:700px;
-    border-radius:10px;
-    text-align:center;
+#success{
+    display:none;
 }
 
-.close{
-    float:right;
-    cursor:pointer;
-    font-size:30px;
+.floating{
+    position:absolute;
+    font-size:35px;
+    animation:float linear infinite;
+    opacity:0.8;
 }
 
-.footer{
-    text-align:center;
-    padding:40px;
-    color:#888;
+@keyframes float{
+    from{
+        transform:translateY(110vh);
+    }
+    to{
+        transform:translateY(-120px);
+    }
+}
+
+.typewriter{
+    overflow:hidden;
+    border-right:.15em solid white;
+    white-space:nowrap;
+    margin:auto;
+    animation:
+    typing 5s steps(60,end),
+    blink .8s infinite;
+}
+
+@keyframes typing{
+    from{width:0}
+    to{width:100%}
+}
+
+@keyframes blink{
+    50%{border-color:transparent}
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
+<div class="floating" style="left:5%;animation-duration:12s;">🌸</div>
+<div class="floating" style="left:15%;animation-duration:10s;">🧸</div>
+<div class="floating" style="left:25%;animation-duration:14s;">🌷</div>
+<div class="floating" style="left:35%;animation-duration:11s;">💖</div>
+<div class="floating" style="left:50%;animation-duration:13s;">🌹</div>
+<div class="floating" style="left:65%;animation-duration:9s;">🧸</div>
+<div class="floating" style="left:80%;animation-duration:12s;">🌸</div>
+<div class="floating" style="left:90%;animation-duration:10s;">❤️</div>
 
-<div class="nav">
-<div class="logo">OUR STORY ❤️</div>
-</div>
+<div class="container">
 
-<div class="hero-content">
+<div id="questionSection">
 
-<div class="badge">NOW STREAMING</div>
+<div class="heart">❤️</div>
 
-<div class="title">The Girl Called Rasmalai ❤️</div>
+<h1>Hey Rasmalai 🥰</h1>
 
-<div class="subtitle">
-Starring: Sneha ✨
-</div>
+<p class="typewriter">
+Out of all the flowers in the world, I'd still choose you 🌸
+</p>
 
-<div class="description">
-A heartwarming series about a girl who somehow manages
-to make ordinary days feel special, random conversations
-feel memorable, and one particular guy smile a lot more
-than he used to.
-</div>
+<br><br>
 
-<div class="buttons">
-<button class="btn play" onclick="playMovie()">▶ Play</button>
-<button class="btn info" onclick="showInfo()">ℹ More Info</button>
-</div>
+<h2>
+Sneha 🌷<br>
+Will you go on a date with me on the 20th?
+</h2>
 
-</div>
-</div>
+<p>
+There will be flowers 🌹<br>
+There will be plushies 🧸<br>
+And most importantly... You ❤️
+</p>
 
-<div class="section">
-<h2>Continue Watching ❤️</h2>
-
-<div class="row">
-
-<div class="card"
-onclick="openModal('The Day We Met','Little did I know that one conversation would become one of my favorite memories.')">
-The Day We Met
-</div>
-
-<div class="card"
-onclick="openModal('Your Smile','One of the easiest ways to improve my day is simply seeing you smile.')">
-Your Smile
-</div>
-
-<div class="card"
-onclick="openModal('Favorite Notification','You know things are serious when seeing your message instantly improves the mood.')">
-Favorite Notification
-</div>
-
-<div class="card"
-onclick="openModal('Comfort Person','Thank you for making conversations feel easy and comfortable.')">
-Comfort Person
+<div class="btn-container">
+<button id="yesBtn">Yes 💖</button>
+<button id="noBtn">No 😝</button>
 </div>
 
 </div>
-</div>
 
-<div class="section">
-<h2>Top Picks For Sneha ❤️</h2>
+<div id="success">
 
-<div class="row">
+<div style="font-size:90px;">🥹❤️</div>
 
-<div class="card"
-onclick="openModal('Reason #1','You are kind in ways people often overlook.')">
-Reason #1
-</div>
+<h1>MY RASMALAI SAID YES!</h1>
 
-<div class="card"
-onclick="openModal('Reason #2','You make ordinary moments memorable.')">
-Reason #2
-</div>
+<p style="margin-top:20px;">
+Date Confirmed For The 20th 🌹✨
+</p>
 
-<div class="card"
-onclick="openModal('Reason #3','You are genuinely fun to talk to.')">
-Reason #3
-</div>
+<p>
+Get ready for flowers 🌸<br>
+Cute plushies 🧸<br>
+Lots of smiles 😊<br>
+And a wonderful day together ❤️
+</p>
 
-<div class="card"
-onclick="openModal('Reason #4','Because you are you.')">
-Reason #4
-</div>
+<h2 style="margin-top:20px;">
+I can't wait to see you, Sneha 💖
+</h2>
 
 </div>
-</div>
 
-<div class="section">
-<h2>Coming Soon 🎬</h2>
-
-<div class="row">
-
-<div class="card"
-onclick="openModal('Future Memory','A future memory waiting to happen.')">
-Movie Together
-</div>
-
-<div class="card"
-onclick="openModal('Adventure','Hopefully many laughs and memories ahead.')">
-Trip Together
-</div>
-
-<div class="card"
-onclick="openModal('Many More Episodes','This series is just getting started.')">
-Season 2
-</div>
-
-<div class="card"
-onclick="secretButton()">
-DO NOT CLICK 😏
-</div>
-
-</div>
-</div>
-
-<div class="footer">
-Created for Sneha ❤️ AKA Rasmalai
-</div>
-
-<div class="modal" id="modal">
-<div class="modal-content">
-
-<span class="close" onclick="closeModal()">&times;</span>
-
-<h1 id="modalTitle"></h1>
-<br>
-<p id="modalText"></p>
-
-</div>
 </div>
 
 <script>
 
-function openModal(title,text){
-    document.getElementById("modal").style.display="flex";
-    document.getElementById("modalTitle").innerText=title;
-    document.getElementById("modalText").innerText=text;
+const noBtn = document.getElementById("noBtn");
+
+function moveButton(){
+
+    const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+    const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
 }
 
-function closeModal(){
-    document.getElementById("modal").style.display="none";
-}
+moveButton();
 
-function playMovie(){
-    openModal(
-        "Now Playing ❤️",
-        "Out of all the people I could have met, I am genuinely happy that I met you, Sneha. Thank you for being part of my days and for making them brighter. ❤️"
-    );
-}
+noBtn.addEventListener("mouseenter", moveButton);
 
-function showInfo(){
-    openModal(
-        "Series Information",
-        "Genre: Romance, Comedy, Comfort. Rating: 10/10. Main Character: Sneha (Rasmalai). Status: My Favorite Person."
-    );
-}
+noBtn.addEventListener("touchstart", function(e){
+    e.preventDefault();
+    moveButton();
+});
 
-function secretButton(){
-    openModal(
-        "Error 404 ❤️",
-        "Search completed. No one more special than Rasmalai was found."
-    );
-}
+document.addEventListener("touchmove", function(e){
 
-window.onclick = function(event){
-    let modal = document.getElementById("modal");
-    if(event.target == modal){
-        modal.style.display = "none";
+    const touch = e.touches[0];
+    const rect = noBtn.getBoundingClientRect();
+
+    if(
+        touch.clientX > rect.left - 120 &&
+        touch.clientX < rect.right + 120 &&
+        touch.clientY > rect.top - 120 &&
+        touch.clientY < rect.bottom + 120
+    ){
+        moveButton();
     }
-}
+
+});
+
+noBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    moveButton();
+});
+
+document.getElementById("yesBtn").addEventListener("click", () => {
+
+    document.getElementById("questionSection").style.display="none";
+    document.getElementById("success").style.display="block";
+
+    for(let i=0;i<80;i++){
+
+        let emoji=document.createElement("div");
+
+        emoji.innerHTML=["🌸","🌹","🧸","❤️","💖","🌷"][Math.floor(Math.random()*6)];
+
+        emoji.style.position="fixed";
+        emoji.style.left=Math.random()*100+"vw";
+        emoji.style.top="-50px";
+        emoji.style.fontSize=(20+Math.random()*30)+"px";
+        emoji.style.pointerEvents="none";
+        emoji.style.transition="transform 5s linear";
+
+        document.body.appendChild(emoji);
+
+        setTimeout(()=>{
+            emoji.style.transform="translateY(120vh)";
+        },50);
+    }
+});
+
 </script>
 
 </body>
