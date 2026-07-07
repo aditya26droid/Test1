@@ -3,277 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Rasmalai ❤️</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
-body{
-    min-height:100vh;
-    overflow:hidden;
-    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    position:relative;
-}
-
-.container{
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(10px);
-    padding:30px;
-    border-radius:25px;
-    max-width:700px;
-    width:90%;
-    color:white;
-    z-index:10;
-}
-
-h1{
-    font-size:3rem;
-    margin-bottom:10px;
-}
-
-h2{
-    margin:20px 0;
-    font-size:2rem;
-}
-
-p{
-    font-size:1.2rem;
-    line-height:1.8;
-}
-
-.heart{
-    font-size:80px;
-    animation:beat 1s infinite;
-}
-
-@keyframes beat{
-    0%,100%{transform:scale(1);}
-    50%{transform:scale(1.15);}
-}
-
-.btn-container{
-    margin-top:35px;
-    height:180px;
-    position:relative;
-}
-
-button{
-    border:none;
-    border-radius:50px;
-    padding:15px 35px;
-    font-size:1.2rem;
-    cursor:pointer;
-    transition:.3s;
-}
-
-#yesBtn{
-    background:#ff4f81;
-    color:white;
-    box-shadow:0 0 20px rgba(255,79,129,0.4);
-}
-
-#yesBtn:hover{
-    transform:scale(1.1);
-}
-
-#noBtn{
-    background:white;
-    color:#ff4f81;
-    position:fixed;
-    font-weight:bold;
-}
-
-#success{
-    display:none;
-}
-
-.floating{
-    position:absolute;
-    font-size:35px;
-    animation:float linear infinite;
-    opacity:0.8;
-}
-
-@keyframes float{
-    from{
-        transform:translateY(110vh);
-    }
-    to{
-        transform:translateY(-120px);
-    }
-}
-
-.typewriter{
-    overflow:hidden;
-    border-right:.15em solid white;
-    white-space:nowrap;
-    margin:auto;
-    animation:
-    typing 5s steps(60,end),
-    blink .8s infinite;
-}
-
-@keyframes typing{
-    from{width:0}
-    to{width:100%}
-}
-
-@keyframes blink{
-    50%{border-color:transparent}
-}
-</style>
+<title>Happy Birthday Sneha ❤️</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<div class="floating" style="left:5%;animation-duration:12s;">🌸</div>
-<div class="floating" style="left:15%;animation-duration:10s;">🧸</div>
-<div class="floating" style="left:25%;animation-duration:14s;">🌷</div>
-<div class="floating" style="left:35%;animation-duration:11s;">💖</div>
-<div class="floating" style="left:50%;animation-duration:13s;">🌹</div>
-<div class="floating" style="left:65%;animation-duration:9s;">🧸</div>
-<div class="floating" style="left:80%;animation-duration:12s;">🌸</div>
-<div class="floating" style="left:90%;animation-duration:10s;">❤️</div>
-
-<div class="container">
-
-<div id="questionSection">
-
-<div class="heart">❤️</div>
-
-<h1>Hey Rasmalai 🥰</h1>
-
-<p class="typewriter">
-Out of all the flowers in the world, I'd still choose you 🌸
-</p>
-
-<br><br>
-
-<h2>
-Sneha 🌷<br>
-Will you go on a date with me on the 20th?
-</h2>
-
-<p>
-There will be flowers 🌹<br>
-There will be plushies 🧸<br>
-And most importantly... You ❤️
-</p>
-
-<div class="btn-container">
-<button id="yesBtn">Yes 💖</button>
-<button id="noBtn">No 😝</button>
+<div id="welcome" class="screen active">
+<h1>🎂 Happy Birthday Sneha ❤️</h1>
+<p>Catch 10 hearts to unlock your surprise.</p>
+<button id="start">Start Adventure</button>
 </div>
 
+<div id="game" class="screen">
+<h2>❤️ Hearts: <span id="score">0</span>/10</h2>
+<div id="playArea"></div>
 </div>
 
-<div id="success">
-
-<div style="font-size:90px;">🥹❤️</div>
-
-<h1>MY RASMALAI SAID YES!</h1>
-
-<p style="margin-top:20px;">
-Date Confirmed For The 20th 🌹✨
-</p>
-
-<p>
-Get ready for flowers 🌸<br>
-Cute plushies 🧸<br>
-Lots of smiles 😊<br>
-And a wonderful day together ❤️
-</p>
-
-<h2 style="margin-top:20px;">
-I can't wait to see you, Sneha 💖
-</h2>
-
+<div id="gallery" class="screen">
+<h2>Our Memories ❤️</h2>
+<div class="photos">
+<img src="images/1.jpg">
+<img src="images/2.jpg">
+<img src="images/3.jpg">
+<img src="images/4.jpg">
+<img src="images/5.jpg">
+</div>
+<button id="letterBtn">Continue</button>
 </div>
 
+<div id="letter" class="screen">
+<h2>💌</h2>
+<p>Happy Birthday, my love. Thank you for making every day brighter. You are my favourite person and I hope today is as beautiful as your smile. I love you forever. ❤️</p>
+<button onclick="showFinal()">Open Gift</button>
 </div>
 
-<script>
+<div id="final" class="screen">
+<h1>🎉 Happy Birthday My Princess ❤️</h1>
+<p>Your real surprise is waiting with me. I love you endlessly.</p>
+</div>
 
-const noBtn = document.getElementById("noBtn");
-
-function moveButton(){
-
-    const maxX = window.innerWidth - noBtn.offsetWidth - 20;
-    const maxY = window.innerHeight - noBtn.offsetHeight - 20;
-
-    const x = Math.random() * maxX;
-    const y = Math.random() * maxY;
-
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
-}
-
-moveButton();
-
-noBtn.addEventListener("mouseenter", moveButton);
-
-noBtn.addEventListener("touchstart", function(e){
-    e.preventDefault();
-    moveButton();
-});
-
-document.addEventListener("touchmove", function(e){
-
-    const touch = e.touches[0];
-    const rect = noBtn.getBoundingClientRect();
-
-    if(
-        touch.clientX > rect.left - 120 &&
-        touch.clientX < rect.right + 120 &&
-        touch.clientY > rect.top - 120 &&
-        touch.clientY < rect.bottom + 120
-    ){
-        moveButton();
-    }
-
-});
-
-noBtn.addEventListener("click", function(e){
-    e.preventDefault();
-    moveButton();
-});
-
-document.getElementById("yesBtn").addEventListener("click", () => {
-
-    document.getElementById("questionSection").style.display="none";
-    document.getElementById("success").style.display="block";
-
-    for(let i=0;i<80;i++){
-
-        let emoji=document.createElement("div");
-
-        emoji.innerHTML=["🌸","🌹","🧸","❤️","💖","🌷"][Math.floor(Math.random()*6)];
-
-        emoji.style.position="fixed";
-        emoji.style.left=Math.random()*100+"vw";
-        emoji.style.top="-50px";
-        emoji.style.fontSize=(20+Math.random()*30)+"px";
-        emoji.style.pointerEvents="none";
-        emoji.style.transition="transform 5s linear";
-
-        document.body.appendChild(emoji);
-
-        setTimeout(()=>{
-            emoji.style.transform="translateY(120vh)";
-        },50);
-    }
-});
-
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
