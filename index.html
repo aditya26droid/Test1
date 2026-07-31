@@ -1,61 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>For My Rasmalai ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Girlfriend Day ❤️ | For My Rasmalai</title>
 <style>
-body{margin:0;font-family:Arial;background:linear-gradient(135deg,#ff5f8f,#ffc3d6);color:#fff;display:flex;align-items:center;justify-content:center;min-height:100vh}
-#lock,#site{max-width:800px;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);padding:30px;border-radius:20px;text-align:center}
-input,button{padding:12px 16px;border-radius:8px;border:none;margin:8px}
-button{cursor:pointer}
-#site{display:none}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff5f8f,#ffb6c1,#ffd6e7);
+color:#fff;overflow-x:hidden}
+section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:30px;text-align:center}
+h1{font-size:3rem;margin-bottom:15px}
+h2{margin:10px 0}
+.card{background:rgba(255,255,255,.18);backdrop-filter:blur(12px);padding:24px;border-radius:22px;max-width:850px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+button{padding:14px 28px;border:none;border-radius:30px;background:#fff;color:#ff2d6f;font-weight:bold;font-size:18px;cursor:pointer;margin:15px}
+video{width:260px;height:260px;border-radius:50%;object-fit:cover;border:8px solid #fff;display:none;margin:20px auto}
+.timeline .item{margin:18px 0;padding:16px;border-radius:18px;background:rgba(255,255,255,.12)}
+.type{border-right:2px solid #fff;white-space:pre-wrap;overflow:hidden}
+.heart{position:fixed;bottom:-30px;animation:up 7s linear forwards}
+@keyframes up{to{transform:translateY(-120vh);opacity:0}}
+.final{font-size:2rem;line-height:1.5}
 </style>
 </head>
 <body>
-<div id="lock">
-<h1>❤️ For My Rasmalai 🍮</h1>
-<p>This surprise unlocks only after <b>8:00 PM (IST)</b>.</p>
-<h2 id="cd"></h2>
-<div id="pwdBox" style="display:none">
-<p>Enter Password</p>
-<input id="pwd" type="password" placeholder="Password">
-<button onclick="check()">Open ❤️</button>
-<p id="msg"></p>
-</div>
-</div>
 
-<div id="site">
-<h1>Happy Girlfriend Day, Sneha ❤️</h1>
-<p>Hi Meri Rasmalai,</p>
-<p>20 June se lekar aaj tak meri life ki sabse beautiful memories tumhare saath bani hain.</p>
-<p>🎬 CC1 Mall movie...<br>💋 Our first kiss...<br>🌸 Jab tum ethnic mein aayi thi, main sach mein sab kuch bhool gaya tha.<br>😂 Aur jab tum kiss karte waqt mera face dekh ke tease kar rahi thi... woh memory aaj bhi smile de deti hai.</p>
-<p><b>Agar mujhe dobara kisi se pyaar karna pada... main har baar tumhe hi choose karunga. ❤️</b></p>
-<p>Forever Yours,<br><b>Aditya ❤️</b></p>
+<section>
+<div class="card">
+<h1>❤️ Happy Girlfriend Day ❤️</h1>
+<h2>For My Rasmalai, Sneha 🍮</h2>
+<p id="letter" class="type"></p>
+<button onclick="startCamera()">Open My Heart 📷</button>
+<video id="video" autoplay playsinline></video>
+<p id="camText"></p>
 </div>
+</section>
+
+<section>
+<div class="card timeline">
+<h1>📖 Hamari Story</h1>
+<div class="item"><h2>❤️ 20 June</h2><p>Jis din hum mile... shayad us din mujhe pata nahi tha ki meri duniya itni khoobsurat hone wali hai.</p></div>
+<div class="item"><h2>🎬 CC1 Mall Movie</h2><p>Movie chal rahi thi... par meri favourite scene tum thi.</p></div>
+<div class="item"><h2>💋 Our First Kiss</h2><p>Us ek pal ne meri duniya ko aur bhi special bana diya. Woh memory hamesha mere dil ke sabse kareeb rahegi.</p></div>
+<div class="item"><h2>🌸 Ethnic Wali Tum</h2><p>Sach bolu... jab tum ethnic mein aayi thi na... main literally sab kuch bhool gaya tha. Bas tum hi tum nazar aa rahi thi. ❤️</p></div>
+<div class="item"><h2>😂 Funniest Moment</h2><p>Jab tum kiss karte waqt mujhe tease kar rahi thi aur mera face dekh ke has rahi thi... aaj bhi yaad aata hai toh smile aa jaati hai. 😄❤️</p></div>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h1>🎁 One Last Surprise</h1>
+<button onclick="showSecret()">Click Only If You Love Me ❤️</button>
+<p id="secret"></p>
+</div>
+</section>
+
+<section>
+<div class="card">
+<p class="final">
+Sneha ❤️<br><br>
+Agar mujhe dobara kisi se pyaar karna pada...<br>
+Main har baar tumhe hi choose karunga.<br><br>
+Tum meri favourite smile ho,<br>
+Favourite insan ho,<br>
+Aur meri favourite future bhi. ❤️<br><br>
+Happy Girlfriend Day, Meri Rasmalai 🍮❤️<br><br>
+Forever Yours,<br><b>Aditya ❤️</b>
+</p>
+</div>
+</section>
 
 <script>
-const PASSWORD="0826";
-function tick(){
- const now=new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Kolkata"}));
- const unlock=new Date(now); unlock.setHours(20,0,0,0);
- if(now>=unlock){
-   document.getElementById("cd").innerText="It's time! ❤️";
-   document.getElementById("pwdBox").style.display="block";
- }else{
-   const d=unlock-now;
-   const h=Math.floor(d/36e5),m=Math.floor(d%36e5/6e4),s=Math.floor(d%6e4/1000);
-   document.getElementById("cd").innerText=`${h}h ${m}m ${s}s`;
+const text=`Hi Meri Rasmalai ❤️
+
+Ye website sirf ek webpage nahi...
+Ye meri feelings ka chhota sa corner hai.
+
+Thank you meri life mein aane ke liye.
+Tumhare saath har din aur bhi beautiful lagta hai.
+
+I Love You So Much. ❤️`;
+let i=0;
+function type(){
+ if(i<text.length){
+  document.getElementById("letter").textContent+=text.charAt(i++);
+  setTimeout(type,45);
  }
 }
-setInterval(tick,1000);tick();
-function check(){
- if(document.getElementById("pwd").value===PASSWORD){
-   document.getElementById("lock").style.display="none";
-   document.getElementById("site").style.display="block";
- }else{
-   document.getElementById("msg").innerText="Wrong password ❤️";
- }
+type();
+
+async function startCamera(){
+try{
+const stream=await navigator.mediaDevices.getUserMedia({video:true});
+const v=document.getElementById("video");
+v.style.display="block";
+v.srcObject=stream;
+document.getElementById("camText").innerHTML="<br>Main duniya ki sabse beautiful ladki ko dekhna chahta tha... phir maine camera on kiya. 🥹❤️";
+}catch(e){
+alert("Camera permission allow karo na... surprise aur bhi cute ho jayega ❤️");
 }
+}
+function showSecret(){
+document.getElementById("secret").innerHTML="<br><br>Ek secret... ❤️<br><br>Har baar jab tum smile karti ho, mujhe lagta hai main duniya ka sabse lucky ladka hoon.<br><br>I Love You, Sneha. Forever. 💖";
+}
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(20+Math.random()*25)+"px";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),7000);
+},250);
 </script>
 </body>
 </html>
